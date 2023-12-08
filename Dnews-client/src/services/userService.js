@@ -1,6 +1,8 @@
 import * as request from "../services/apiService";
 
-const apiUrl = "http://localhost:3030/users";
+// const apiUrl = "http://localhost:3030/users";
+
+const apiUrl = 'https://server-dnews-site.onrender.com';
 
 //////////////////////////////////////////////// LOGIN///////////////////////////////
 
