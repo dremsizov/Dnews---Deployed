@@ -1,0 +1,20 @@
+ .spenerContainer{
+    width: 100%;
+    height: 100%;
+} 
+
+.spiner{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.spiner img{
+    width: 30rem;
+    height: 30rem;
+}

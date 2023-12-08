@@ -1,0 +1,48 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    
+}
+.optionSection{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(104, 150, 150);
+    padding: 1.5rem;
+}
+
+.optionSection h2{
+    font-size: 1.6rem;
+    display: flex;
+}
+
+.logoPicture{
+    width: 30%;
+}
+.sociaMedia i{
+    gap: 1em;
+    font-size: 2em;
+    width: 2em;
+}
+.mail{
+    display: flex;
+    align-items: center;
+    gap:1em;
+}
+.mail p{
+    font-size: 1.2em;
+}
+.btnMail{
+    font-size: 1.2em;
+}
+
+.author{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: none;
+    padding: 0.5rem;
+}

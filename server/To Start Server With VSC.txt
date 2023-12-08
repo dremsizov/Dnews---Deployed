@@ -1,0 +1,4 @@
+path to file D:\SoftUni\JS Applications
+run this command
+
+node server.js

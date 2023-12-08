@@ -1,0 +1,104 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
+
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  align-items: center;
+  background-color: rgb(104, 150, 150);
+
+}
+
+.newsLogo {
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
+  font-size: 2rem;
+  color: black;
+}
+.icons {
+  display: flex;
+  gap: 2rem;
+  font-size: 2rem;
+}
+
+.logoPicture {
+  width: 50%;
+  padding-left: 1rem;
+}
+
+.login1 {
+  color: black;
+}
+
+.onOff {
+  border: 2px solid black;
+  border-radius: 12rem;
+  padding: 0.2rem;
+}
+
+
+.newsLogo {
+  position: relative;
+}
+
+/* .logoPicture,
+.logoText {
+  transition: transform 2s ease;
+}
+
+.newsLogo:hover .logoPicture {
+  transform: translateX(370%);
+}
+
+.newsLogo:hover .logoText {
+  opacity: 0;
+} */
+
+
+
+@keyframes slideLogo {
+  0% {
+    transform: translateX(0);
+    
+  }
+  
+  100% {
+    transform: translateX(370%);
+    
+  }
+}
+
+.logoPicture,
+.logoText {
+  transition: opacity 0.5s ease;
+}
+
+.newsLogo:hover .logoText {
+  opacity: 0;
+}
+
+.newsLogo:hover .logoPicture {
+  animation: slideLogo 2s ease forwards; 
+}
+
+
+
+
+.logoText {
+  position: relative;
+  right: 25%;
+}
+
+.searchBTN i, .login i, .create i, .logout i, .profile i, .register i{
+font-size: 2rem;
+color: black;
+cursor: pointer;
+}
+
+.profile i{
+font-weight: 600;
+}

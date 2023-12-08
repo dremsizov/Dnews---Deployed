@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    display: flex;
+    justify-content:center;
+    gap:4rem;
+    margin: 1.5rem;
+}
+
+                                            /* PROFILE CARD CSS */
+.profileCardContainer, .profileNewsCreate{
+    border: 0.1rem solid black;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+.profileImage, .profileInfo{
+    margin: 1rem;
+    text-align: center;
+}
+
+.profileImage img{
+    width: auto;
+    height: 10rem;
+}
+.profileInfo input{
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    font-size: 1.4rem;
+    padding: 0.3rem;
+
+}
+
+.profileInfo label{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: left;
+    display: block;
+    padding: 0.3rem;
+    color:#333;
+}
+.buttons{
+    text-align: center;
+    padding-bottom: 2rem;
+}
+.createBtnEdit{
+    width: 18rem;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+.profileInfo input:disabled {
+    background-color: #f2f2f2; 
+    color: #999; 
+    cursor: not-allowed
+  }
+
+/*  Profile Info */
+
+.profileNewsCreate{
+    width: 60rem;
+
+}
+.profileNewsCreateTitle {
+    margin: 1rem;
+}
+
+.profileNewsCreateTitle h2{
+color: #333;
+font-size: 2rem;
+font-style:italic;
+font-weight: 400;
+letter-spacing: 0.2rem;
+
+}
+
+
+

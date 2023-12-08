@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+.title h2{
+    text-align: center;
+    margin: 2rem;
+    font-size: 3rem;
+    }
+    
+/* shop */
+.artCard{
+    display: flex;
+}
+
+/* box */
+.newsCardT{
+display: flex;
+width: 100%;
+height: 17rem;
+overflow: hidden;
+margin-bottom: 2rem;
+background-color: rgb(228, 225, 225);
+transition: all .6s ease;
+box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+
+.newsCardT:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.newsCardT img{
+    width: 30rem;
+    height: 25rem;
+    object-fit: cover;
+
+}
+
+/* content */
+.newsInfo{
+padding: 2rem;
+position: relative;
+width: 100%;
+}
+
+.newsInfo h3{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.2rem;
+}
+
+.newsDate{
+    margin-bottom: 2rem;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.newsText{
+    font-size: 1.5rem;
+}
+
+.NoNewsimg {
+    display: flex;
+   justify-content: center;
+   position: absolute;
+   top: 90%; 
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.NoNewsimg img{
+    width: 80rem;
+    height: auto;
+    border-radius: 18rem;
+    overflow: hidden;
+}
+
+.NoNewsText {
+    text-align: center; 
+    color: white; 
+    position: relative; 
+    z-index: 1; 
+    padding: 20rem;
+}
+.NoNewsText h3{
+    color: black;
+    padding: 2.5rem;
+}
+    .NoNews{
+         font-size: 2rem;
+         padding-bottom: 2rem;
+        justify-content:space-around;
+        align-items: center;
+        min-height: 70vh;
+         background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: auto;
+        height: auto;
+    } 
+    .NoNewsBtn{
+        font-size: 2rem;
+        color: black;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+
+
+    .workingSpace{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('../../../public/assets/bacground1.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: auto;
+        padding: 5rem 25rem;
+        border-radius: 5rem;
+    }
+    
+        
+.NoNewsText {
+    text-align: center; 
+    color: white; 
+     padding: 1rem;
+}
+.NoNewsText h3{
+    color: black;
+    padding: 2.5rem;
+}
+.NoNewsBtn{
+        font-size: 2rem;
+        color: black;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+    .NoNews{
+        font-size: 2em;
+    }

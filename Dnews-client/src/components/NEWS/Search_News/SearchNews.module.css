@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.searchContainer {
+    text-align: center;
+    padding: 3rem 18rem 8rem 18rem;;
+    border-radius: 10px;
+    
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.searcInput {
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.searchButton {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.searchButton:hover {
+    background-color: #45a049;
+}
+
+.searchBox{
+    width: auto;
+    border-radius: 2rem;
+    background-color: rgba(147, 145, 145, 0.2);
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.searchBox form{
+display: flex;
+gap: 1em;
+}
+.searchBox input{
+font-size: 2rem;
+border-radius: 2rem;
+background-color: transparent;
+padding: 0.5rem 0.45rem;
+text-indent: 0.5rem;
+border: 1px solid black;
+
+}
+
+.searchBox input:focus{
+    background-color: white;
+}
+
+.searchBox h1{
+    font-size: 2rem;
+}
+
+.search-button i{
+    font-size: 2rem;
+    cursor: pointer;
+    
+}
+
+.errorMessage{
+    color: red;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+button i{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.search-button {
+     border: none;
+    background-color: transparent; 
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+.search-button i {
+    font-size: 2rem;
+}
+
+.NoFoundSearch {
+    font-size: 2rem;
+    text-align: center;
+    margin: 10rem;
+}

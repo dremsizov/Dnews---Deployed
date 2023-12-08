@@ -1,0 +1,119 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.loginForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../../public/assets/bacground1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: auto;
+    padding: 5rem 25rem;
+}
+
+
+.workingSpace {
+    background-color: rgba(147, 145, 145, 0.5);
+     border-radius: 2rem;
+     padding: 2.5rem;
+}
+
+.title{
+    text-align: center;
+    font-size: 3rem;
+    margin: 1rem;
+    padding-bottom: 1rem;
+}
+
+.formPlace{
+    display: flex;
+    justify-content: center;
+}
+
+.textIntput{
+    display: flex;
+    font-size: 2.5rem;
+    gap:1rem;
+    padding-bottom: 4rem;
+        
+}
+.formInput{
+    font-size: 2.5rem;
+    border-radius: 2rem;
+    background-color: inherit;
+    width: 25rem;
+    padding: 0.25rem 4rem 0.25rem 0.8rem ;
+    
+       
+}
+::placeholder{
+    text-align: center
+}
+
+
+.showHideBtn{
+    cursor: pointer;
+}
+.signUp {
+    text-align: center;
+    padding-top: 3rem;
+    padding: 1rem;  
+   }
+
+
+   .signUp button{
+    font-size: 2rem;
+    width: 25rem;
+    text-align: center;
+    border-radius: 3rem;
+    cursor: pointer; 
+        }
+  
+        .loginNav{
+            padding-top: 2rem;
+        }
+     
+
+.errorMessage{
+    color: rgb(191, 12, 12);
+    font-size: 1.2rem;
+    position: absolute;
+    top:115%;
+    left:2% ;
+}
+
+
+
+.inputWrapper{
+    position: relative;
+}
+
+
+.inputWrapper i{
+    position: absolute;
+    top:10%;
+    right:5%;
+}
+.inputWrapper div, .inputWrapper div i{
+    position: absolute;
+    top:5%;
+    right:11%;
+}
+.pass .errorMessage{
+    top:50%;
+    left:3% ;
+}
+
+.serverError {
+    padding: 1rem;
+    color: red;
+    font-size: 1.5rem;
+    text-align: center;
+}
+

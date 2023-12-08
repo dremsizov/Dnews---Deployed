@@ -1,0 +1,25 @@
+.newsContainer{
+margin: 2rem;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+padding-inline: 4rem;
+}
+
+.serverError {
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.NoNewsContainer{
+    width: auto;
+    height: 100vh;
+    text-align: center;
+    margin: 2rem auto;
+
+}
+
+.NoNews{
+    font-size: 2em;
+}

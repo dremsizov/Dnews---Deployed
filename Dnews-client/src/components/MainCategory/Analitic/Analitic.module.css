@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.newsCardT img{
+    width: 30rem;
+    height: 25rem;
+    object-fit: cover;
+}
+
+/* content */
+.newsInfo{
+padding: 2rem;
+position: relative;
+width: 100%;
+}
+
+.newsInfo h3{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.2rem;
+}
+
+.newsDate{
+    margin-bottom: 2rem;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.newsText{
+    font-size: 1.5rem;
+}
+
+
+.title h2{
+    text-align: center;
+    margin: 2rem;
+    font-size: 3rem;
+    }
+
+
+        .serverError {
+            padding: 1.5rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+        
+       
+
+
+        .workingSpace{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('../../../public/assets/bacground1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: auto;
+            padding: 5rem 25rem;
+            border-radius: 5rem;
+        }
+        
+            
+    .NoNewsText {
+        text-align: center; 
+        color: white; 
+         padding: 1rem;
+    }
+    .NoNewsText h3{
+        color: black;
+        padding: 2.5rem;
+    }
+    .NoNewsBtn{
+            font-size: 2rem;
+            color: black;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        .NoNews{
+            font-size: 2em;
+        }
+
+        
