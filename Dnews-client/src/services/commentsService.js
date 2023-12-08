@@ -2,7 +2,7 @@ import * as request from '../services/apiService'
 
 // const apiUrl = 'http://localhost:3030/data/comments';
 
-const apiUrl = 'https://server-dnews-site.onrender.com';
+const apiUrl = 'https://server-dnews-site.onrender.com/data/comments';
 
 
 export const getAllNewsComments = async (newsID) => {
