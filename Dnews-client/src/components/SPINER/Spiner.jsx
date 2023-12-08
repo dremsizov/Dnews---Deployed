@@ -6,7 +6,7 @@ export default function Spiner(){
     <div className={styles.spenerContainer}>
 
         <div className={styles.spiner}>
-            <img src='assets/gif.gif' alt="#"  />
+            <img src='assets/spinnerPen.gif' alt="#"  />
         </div>
     </div>
     )
