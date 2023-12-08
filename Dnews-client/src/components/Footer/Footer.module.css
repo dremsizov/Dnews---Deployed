@@ -28,7 +28,7 @@ footer{
 .mail{
     display: flex;
     align-items: center;
-    gap:1em;
+    gap:0.5rem;
 }
 .mail p{
     font-size: 1.2em;
@@ -46,3 +46,4 @@ footer{
     font-weight: none;
     padding: 0.5rem;
 }
+

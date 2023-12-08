@@ -14,6 +14,65 @@
     margin: 2rem;
     font-size: 3rem;
     }
+    
+/* shop */
+.artCard{
+    display: flex;
+}
+
+/* box */
+.newsCardT{
+display: flex;
+width: 100%;
+height: 17rem;
+overflow: hidden;
+margin-bottom: 2rem;
+background-color: rgb(228, 225, 225);
+transition: all .6s ease;
+box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+
+.newsCardT:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.newsCardT img{
+    width: 30rem;
+    height: 25rem;
+    object-fit: cover;
+
+}
+
+/* content */
+
+.serverError {
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.newsInfo{
+padding: 2rem;
+position: relative;
+width: 100%;
+}
+
+.newsInfo h3{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.2rem;
+}
+
+.newsDate{
+    margin-bottom: 2rem;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.newsText{
+    font-size: 1.5rem;
+}
 
 .NoNewsimg {
     display: flex;
@@ -53,6 +112,7 @@
         background-position: center;
         width: auto;
         height: auto;
+        font-size: 2em;
     } 
     .NoNewsBtn{
         font-size: 2rem;
@@ -61,54 +121,35 @@
         padding: 0.5rem;
     }
 
-/* shop */
-.artCard{
-    display: flex;
-}
 
-/* box */
-.newsCardT{
-display: flex;
-width: 100%;
-height: 17rem;
-overflow: hidden;
-margin-bottom: 2rem;
-background-color: rgb(228, 225, 225);
-transition: all .6s ease;
-box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+    .workingSpace{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('../../../public/assets/bacground1.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: auto;
+        padding: 5rem 25rem;
+        border-radius: 5rem;
+    }
+    
+        
+.NoNewsText {
+    text-align: center; 
+    color: white; 
+     padding: 1rem;
 }
-
-.newsCardT:hover{
-    transform: scale(1.05);
-    cursor: pointer;
+.NoNewsText h3{
+    color: black;
+    padding: 2.5rem;
 }
-
-.newsCardT img{
-    width: 30rem;
-    height: 25rem;
-    object-fit: cover;
-
-}
-
-/* content */
-.newsInfo{
-padding: 2rem;
-position: relative;
-width: 100%;
-}
-
-.newsInfo h3{
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    letter-spacing: 0.2rem;
-}
-
-.newsDate{
-    margin-bottom: 2rem;
-    font-style: italic;
-    font-weight: 400;
-}
-
-.newsText{
-    font-size: 1.5rem;
-}
+.NoNewsBtn{
+        font-size: 2rem;
+        color: black;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+  

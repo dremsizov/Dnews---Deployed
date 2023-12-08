@@ -28,16 +28,17 @@ export default function SportsNews(){
           .finally(()=> setSpining(false)); 
     }, 
     [])
-
+    const sortedNews = [...sports].sort((a, b) => new Date(b._createdOn) - new Date(a._createdOn));
     return(
         <>
-           <div className={styles.pageWrapper}>
+          <div className={styles.pageWrapper}> 
 
         <div className={styles.title}>
 
         <h2>В ритъма на спортните новини</h2>
+        </div>
 
-            <div className={styles.workingSpace}>
+            
             {spining && <Spiner />}
             {hasServerError && (
                         <p className={styles.serverError}>Грешка! </p>
@@ -46,7 +47,7 @@ export default function SportsNews(){
                 ? (
                     <>
                     {
-                        sports.map(newsCard => (
+                        sortedNews.map(newsCard => (
                             <NewsCard key={newsCard._id}
                                 {...newsCard}
                                 />
@@ -68,8 +69,7 @@ export default function SportsNews(){
                 </div>
 }
             </div>
-        </div>
-                    </div>
+    
         </>
     )
 }

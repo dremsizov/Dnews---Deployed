@@ -31,7 +31,8 @@ export default function AllNews() {
 
     }, []);
 
-    const reversedNews = [...allNews].reverse();
+    const sortedNews = [...allNews].sort((a, b) => new Date(b._createdOn) - new Date(a._createdOn));
+    // const reversedNews = [...allNews].reverse();
 
     return(
         <>
@@ -49,7 +50,7 @@ export default function AllNews() {
                     ?
                     (
                         <>
-                        {reversedNews.map(newscard =>(
+                        {sortedNews.map(newscard =>(
                             <NewsItem key={newscard._id}
                             {...newscard}
                             />

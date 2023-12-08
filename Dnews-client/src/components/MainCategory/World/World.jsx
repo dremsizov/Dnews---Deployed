@@ -28,14 +28,17 @@ export default function WorldNews(){
           .finally(()=> setSpining(false)); 
     }, 
     [])
-
+    const sortedNews = [...worlds].sort((a, b) => new Date(b._createdOn) - new Date(a._createdOn));
     return(
         <>
+
+<div className={styles.pageWrapper}> 
         <div className={styles.title}>
 
         <h2> Новини - свят</h2>
+        </div>
 
-            <div>
+        
 
             {spining && <Spiner />}
             {hasServerError && (
@@ -46,7 +49,7 @@ export default function WorldNews(){
                 ? (
                     <>
                     {
-                        worlds.map(newsCard => (
+                        sortedNews.map(newsCard => (
                             <NewsCard key={newsCard._id}
                                 {...newsCard}
                                 />
@@ -58,10 +61,7 @@ export default function WorldNews(){
                 )
                 :
                 <div className={styles.NoNews}>
-                <div className={styles.NoNewsimg}>
-                    <img src="../../../public/assets/machine.jpg" />
-                </div>
-                <div className={styles.NoNewsText}>
+               <div className={styles.NoNewsText}>
                 <h3>Все още нямаме новини в тази категория!</h3>
                     <Link to="/createNews">
                 <button className={styles.NoNewsBtn}>Създай 
@@ -71,7 +71,7 @@ export default function WorldNews(){
                 </div>
 }
             </div>
-        </div>
+    
         </>
     )
 }

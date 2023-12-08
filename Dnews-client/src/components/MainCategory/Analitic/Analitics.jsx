@@ -30,7 +30,7 @@ export default function AnaliticsNews(){
           .finally(()=> setSpining(false)); 
     }, 
     [])
-
+    const sortedNews = [...analitics].sort((a, b) => new Date(b._createdOn) - new Date(a._createdOn));
     return(
         <>
 
@@ -41,7 +41,7 @@ export default function AnaliticsNews(){
         <h2>Твоето място за анализи и коментари!</h2>
             </div>
 
-            <div className={styles.workingSpace}>
+            
             {spining && <Spiner />}
             {hasServerError && (
                         <p className={styles.serverError}>Грешка! </p>
@@ -50,7 +50,7 @@ export default function AnaliticsNews(){
                 ? (
                     <>
                     {
-                        analitics.map(newsCard => (
+                        sortedNews.map(newsCard => (
                             <NewsCard key={newsCard._id}
                                 {...newsCard}
                                 />                                                                
@@ -72,7 +72,7 @@ export default function AnaliticsNews(){
  
 }
             </div>
- </div>
+
         </>
     )
 }

@@ -3,8 +3,6 @@ import * as request from '../services/apiService'
 // const apiURL = "http://localhost:3030/data/news";
 const apiURL = 'https://server-dnews-site.onrender.com/data/news';
 
-// const apiLikeUrl = "http://localhost:3030/data/likes"
-
 ////////////////////////////// GET ALL REQUEST ////////////////////////
 export const getAll = async () => {
   

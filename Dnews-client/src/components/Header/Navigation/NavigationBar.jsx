@@ -16,7 +16,7 @@ export default function NavBar() {
                 <li><Link to='/politics'>Политика</Link></li>
                 <li><Link to='/economic'>Икономика</Link></li>
                 <li><Link to='/sport'>Спорт</Link></li>
-                <li><Link to='/lifestyle'>Любипитно</Link></li>
+                <li><Link to='/lifestyle'>Любопитно</Link></li>
                 <li><Link to='/analitics'>Анализи</Link></li>
 
             </ul>

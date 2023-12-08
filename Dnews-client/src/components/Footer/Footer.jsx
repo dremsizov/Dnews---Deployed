@@ -1,10 +1,20 @@
+/* eslint-disable no-unused-vars */
 import newsLogo from '../../../public/assets/logoMic.png'
 import styles from './Footer.module.css'
 
 import { Link } from 'react-router-dom';
 
+import { useEffect, useState } from 'react';
+
 
 export default function FooterComponent() {
+
+  const [currentYear, setCurrentYear] = useState(null);
+
+  useEffect(() => {
+    setCurrentYear(state => state = new Date().getFullYear());                                      // Get the current year dynamically
+
+  }, []);
     return(
       <footer>
         <section className={styles['optionSection']}>
@@ -49,7 +59,7 @@ export default function FooterComponent() {
         </div>
           </div>
         </section>
-<p className={styles['author']}> <Link to ="https://github.com/dremsizov">Viktor Dremsizov</Link>, React 2023</p>
+<p className={styles['author']}>Автор: <Link to ="https://github.com/dremsizov">Виктор Дремсизов</Link>, React {currentYear}. Всички права запазени.</p>
       </footer>
     )
 }

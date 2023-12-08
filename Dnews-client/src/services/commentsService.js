@@ -4,7 +4,6 @@ import * as request from '../services/apiService'
 
 const apiUrl = 'https://server-dnews-site.onrender.com/data/comments';
 
-
 export const getAllNewsComments = async (newsID) => {
     const query = new URLSearchParams({
         where: `newsID="${newsID}"`,

@@ -30,14 +30,16 @@ export default function PoliticsNews(){
           .finally(()=> setSpining(false)); 
     }, 
     [])
-
+    const sortedNews = [...politics].sort((a, b) => new Date(b._createdOn) - new Date(a._createdOn));
     return(
         <>
+        <div className={styles.pageWrapper}> 
         <div className={styles.title}>
 
         <h2>Политическите новини</h2>
+        </div>
 
-            <div>
+      
             {spining && <Spiner />}
             {hasServerError && (
                         <p className={styles.serverError}>Грешка! </p>
@@ -46,7 +48,7 @@ export default function PoliticsNews(){
                 ? (
                     <>
                     {
-                        politics.map(newsCard => (
+                        sortedNews.map(newsCard => (
                             <NewsCard key={newsCard._id}
                                 {...newsCard}
                                 />
@@ -58,9 +60,6 @@ export default function PoliticsNews(){
                 )
                 :
                 <div className={styles.NoNews}>
-                <div className={styles.NoNewsimg}>
-                    <img src="../../../public/assets/machine.jpg" />
-                </div>
                 <div className={styles.NoNewsText}>
                 <h3>Все още нямаме новини в тази категория!</h3>
                     <Link to="/createNews">
@@ -70,7 +69,7 @@ export default function PoliticsNews(){
                 </div>
                 </div>
 }
-            </div>
+            
         </div>
         </>
     )

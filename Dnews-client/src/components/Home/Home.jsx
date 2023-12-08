@@ -31,7 +31,6 @@ export default function Home() {
                 
   }, []);
 
-  const reversedNews = [...newsSeven].reverse();
   return (
     <>
     {spining && <Spiner />}
@@ -43,7 +42,7 @@ export default function Home() {
               ? (
                 <>
           <div className={styles.newsContainer}>
-              {reversedNews.map((newscard) => (
+              {newsSeven.map((newscard) => (
                  <HomeNewsCard key={newscard._id} {...newscard} />
                  ))}
           </div>

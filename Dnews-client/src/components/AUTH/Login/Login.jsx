@@ -114,7 +114,7 @@ export default function Login() {
                     <input
                       type="text"
                       className={styles.formInput}
-                      placeholder="мейл"
+                      placeholder="имейл"
                       name="email"
                       id="email"
                       required
@@ -179,7 +179,7 @@ export default function Login() {
                   <div className={styles.loginNav}>
                     <p>
                       Все още нямате регистрация?
-                      <Link to="/register">Кликни тук</Link>
+                      <Link to="/register"> Кликни тук</Link>
                     </p>
                   </div>
                 </div>
