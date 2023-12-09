@@ -35,7 +35,10 @@ export default function NewsDetails() {
     newsService
       .getOneNews(newsID)
       .then((result) => setNewsDetails(result))
-      .catch((err) => console.log(err));
+      .catch(err =>  {
+        if (err.code == 404) { navigate('/notfound'); }
+        console.log(err.message);
+      })
 
       newsService
       .getLastTreeNews()
