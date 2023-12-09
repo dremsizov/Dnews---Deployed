@@ -15,7 +15,6 @@ import Modal from "react-modal";
 
 const formInitialState = { comment: "" };
 
-
 export default function NewsDetails() {
   document.title = "Details";
 
@@ -26,21 +25,21 @@ export default function NewsDetails() {
   const { newsID } = useParams();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-
   const [newsTree, setNews] = useState([]);
   const [newsDetails, setNewsDetails] = useState({});
-  
 
   useEffect(() => {
     newsService
       .getOneNews(newsID)
       .then((result) => setNewsDetails(result))
-      .catch(err =>  {
-        if (err.code == 404) { navigate('/notfound'); }
+      .catch((err) => {
+        if (err.code == 404) {
+          navigate("/notfound");
+        }
         console.log(err.message);
-      })
+      });
 
-      newsService
+    newsService
       .getLastTreeNews()
       .then((result) => setNews(result))
       .catch((err) => console.log(err));
@@ -53,42 +52,33 @@ export default function NewsDetails() {
     });
   }, [newsID, auth, navigate]);
 
+  let isOwner = false;
+  let isLogdin = false;
 
-let isOwner = false;
-let isLogdin = false;
-
-if (auth) {
-  if (newsDetails._ownerId === auth._id) {
+  if (auth) {
+    if (newsDetails._ownerId === auth._id) {
       isOwner = true;
-  } else {
+    } else {
       isLogdin = true;
+    }
   }
-}
 
-
-
-  const addCommentHandler = async (values) => {
+  const addCommentHandler = async () => {
     try {
-      
-      
+      const newComment = await commentsService.create(newsID, values.comment);
 
-        const newComment = await commentsService.create(newsID, values.comment);
-       
-        newComment.owner = { email: auth.email };
-    
-       dispatch({
-          type: "ADD_COMMENT",
-          payload: newComment,
-        });
-  
-    
-  
+      newComment.owner = { email: auth.email };
+
       values.comment = "";
+      dispatch({
+        type: "ADD_COMMENT",
+
+        payload: newComment,
+      });
     } catch (error) {
       console.error("Error adding comment:", error);
     }
   };
-
 
   const { values, onChange, onSubmit } = useForm(
     addCommentHandler,
@@ -113,10 +103,7 @@ if (auth) {
   };
 
   return (
-
-        
     <div className="bigWrapper">
-     
       <div className={styles.newsDetailsContainer}>
         <div className={styles.textTitleContainer}>
           <h2>{newsDetails.title}</h2>
@@ -137,8 +124,6 @@ if (auth) {
           </div>
         </div>
 
-
-
         {isOwner && (
           <div className={styles.btnContainer}>
             <>
@@ -155,11 +140,11 @@ if (auth) {
             </>
           </div>
         )}
-                <br />
+        <br />
         {/* Coment area */}
-        <br/>
-        
-         <div className={styles.commentsPlace}>
+        <br />
+
+        <div className={styles.commentsPlace}>
           <section className={styles.commentsContainer}>
             <div className={styles.comentsTitle}>
               <h3>Коментари:</h3>
@@ -179,28 +164,28 @@ if (auth) {
                 <p className={styles.noComment}>Няма коментари</p>
               )}
             </div>
-                  {(isLogdin || isOwner ) && (
-
-                <article className={styles.addComentContainer}>
-              <label className={styles.addComentTitle}>Направи коментар:</label>
-              <form className={styles.addFormContainer} onSubmit={onSubmit}>
-                <textarea
-                  className={styles.commentBox}
-                  name="comment"
-                  value={values.comment}
-                  onChange={onChange}
-                  placeholder="Коментирай"
-                ></textarea>
-                <input
-                  disabled={values.comment == ""}
-                  className="btn submit"
-                  type="submit"
-                  value="Изпрати"
-                />
-              </form>
-            </article>
-                  )}
-            
+            {(isLogdin || isOwner) && (
+              <article className={styles.addComentContainer}>
+                <label className={styles.addComentTitle}>
+                  Направи коментар:
+                </label>
+                <form className={styles.addFormContainer} onSubmit={onSubmit}>
+                  <textarea
+                    className={styles.commentBox}
+                    name="comment"
+                    value={values.comment}
+                    onChange={onChange}
+                    placeholder="Коментирай"
+                  ></textarea>
+                  <input
+                    disabled={values.comment == ""}
+                    className="btn submit"
+                    type="submit"
+                    value="Изпрати"
+                  />
+                </form>
+              </article>
+            )}
           </section>
         </div>
 
@@ -214,9 +199,6 @@ if (auth) {
               <NewsCardLast key={newsCard._id} {...newsCard} />
             ))}
           </div>
-
-
-        
         </div>
         {/* MODAL */}
         <Modal
